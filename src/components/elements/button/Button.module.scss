@@ -1,0 +1,14 @@
+.button{
+    cursor: pointer;
+    transition: 0.5s all ease-in;
+    display: block;
+    border-radius: 30px;
+    background: #646ae0;
+    text-align: center;
+    padding: 10px 15px;
+    width: 100%;
+   &:hover{
+    box-shadow: 2px 4px 13px 6px #9599dd;
+    
+   }
+}

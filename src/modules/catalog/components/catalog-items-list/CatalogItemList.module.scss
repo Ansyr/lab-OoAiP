@@ -1,0 +1,17 @@
+.CatalogItemList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 25px;
+}
+.catalog{
+    h3{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }   
+}
+.central{
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}

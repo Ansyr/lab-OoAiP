@@ -1,0 +1,26 @@
+.header{
+    background-color: #646ae0;
+    height: 65px;
+}
+.dFlex{
+    display: flex;
+    align-items: center;
+}
+.logo{
+   width: 35px;
+   height: 35px;
+}
+.menu{
+    padding-left: 300px;
+}
+.menuList{
+    display: flex;
+    margin-left: 50px;
+ 
+}
+
+.menuItem{
+    margin-left: 20px;
+    margin-right: 40px; 
+    color: #fff;
+}
