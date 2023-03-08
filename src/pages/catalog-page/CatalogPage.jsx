@@ -5,6 +5,11 @@ import { Modal } from '../../components/modal/Modal'
 import { useState } from 'react'
 import {Button} from '@components/elements/button/Button'
 import { OrderModal } from '../../modules/order/order-form/OrderForm'
+import axios from 'axios'
+import useSWR from 'swr'
+
+const fetcher = (url => axios.get(url).then(res => res.data))
+
 const data = [
     {
       id: "1",
@@ -36,6 +41,7 @@ const data = [
     },
   ];
 export function CatalogPage(props) {
+    const { data, error, isLoading } = useSWR("http://188.233.11.6:50000/products/", fetcher);
     const [isOpen,setIsOpen] = useState(false);
     const onCloseModal = () => {
         setIsOpen(false);
@@ -48,7 +54,7 @@ export function CatalogPage(props) {
         <h3>
             Каталог
         </h3>
-         <CatalogItemList data = {data} extraForItem={<Button onClick = {onShowModal}> Заказать </Button>}/>
+         <CatalogItemList data = {data} extraForItem={<Button onClick = {onShowModal}> Заказать </Button>} isLoading = {isLoading}/>
          <OrderModal isOpen={isOpen} onClose={onCloseModal} onSuccess = {onCloseModal}/>
     </div>
    
