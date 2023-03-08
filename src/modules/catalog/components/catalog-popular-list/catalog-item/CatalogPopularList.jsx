@@ -36,7 +36,7 @@ const data = [
   },
 ];
 export function CatalogPopularList(props) {
-  const { data, error, isLoading } = useSWR("http://188.233.11.6:50000/products/", fetcher);
+  const { data, error, isLoading } = useSWR("http://asm-explaining.me/products", fetcher);
   const { className } = props;
   
   

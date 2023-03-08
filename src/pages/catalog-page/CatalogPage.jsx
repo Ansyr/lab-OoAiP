@@ -41,7 +41,7 @@ const data = [
     },
   ];
 export function CatalogPage(props) {
-    const { data, error, isLoading } = useSWR("http://188.233.11.6:50000/products/", fetcher);
+    const { data, error, isLoading } = useSWR("http://asm-explaining.me/products/", fetcher);
     const [isOpen,setIsOpen] = useState(false);
     const onCloseModal = () => {
         setIsOpen(false);
